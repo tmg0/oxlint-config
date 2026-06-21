@@ -4,6 +4,9 @@
   "description": "Tamago's oxlint + oxfmt config. An @antfu/eslint-config-style preset, powered by oxlint.",
   "license": "MIT",
   "author": "tmg0",
+  "publishConfig": {
+    "access": "public"
+  },
   "files": [
     "dist"
   ],
