@@ -130,7 +130,7 @@ The rules were derived from `@antfu/eslint-config@9.0.0` and filtered to what ox
 - **Formatting** (`@stylistic`) → handled by **oxfmt** instead. oxfmt is a Prettier-style formatter, so it can't replicate every lint-based nuance (e.g. antfu's `arrow-parens: as-needed + requireForBlockBody`).
 - **`regexp/`** → oxlint has no regexp plugin.
 - **`jsonc` / `yaml` / `toml` / `markdown`** → oxlint can't parse these file types. Use oxfmt for formatting them.
-- **Vue / Svelte / Astro templates** → oxlint lints the `<script>` block of `.vue` files and the supported vue rules above, but template-only rules are partial. Svelte/Astro are unsupported.
+- **Vue / Svelte / Astro templates** → oxlint currently extracts the `<script>` block and **ignores the `<template>`**, so template-logic rules (e.g. `vue/require-v-for-key`, `vue/no-use-v-if-with-v-for`) can't run. The JS-plugin system can't fill this gap either: it has no custom-parser support, so `eslint-plugin-vue` loads but its rules go inert (they bail out asking for `vue-eslint-parser`). Formatting of `.vue` (template included) is still handled by oxfmt. Full SFC support is planned via oxc's **language-plugin system** (lower SFCs to "virtual" TS) — see the RFC at [oxc-project/oxc#21936](https://github.com/oxc-project/oxc/discussions/21936). Svelte/Astro are unsupported for the same reason.
 - Misc antfu-specific plugins (`antfu/`, `command/`, `eslint-comments/`, `unused-imports/`, `e18e/`).
 
 Inspect the rule groups, perfectionist rules, the known gaps, and provenance at runtime:
