@@ -1,5 +1,7 @@
 # @tmg0/oxlint-config
 
+[![npm version](https://img.shields.io/npm/v/@tmg0/oxlint-config?color=cb3837&logo=npm)](https://www.npmjs.com/package/@tmg0/oxlint-config)
+
 Tamago's personal lint + format preset, powered by [oxlint](https://oxc.rs) and [oxfmt](https://oxc.rs/docs/guide/usage/formatter.html) instead of ESLint + Prettier.
 
 The rule set is **inspired by [@antfu/eslint-config](https://github.com/antfu/eslint-config)** — antfu's rule choices were mapped onto the rules oxlint implements — so you get most of antfu's behaviour at oxlint speed, with one line of config. It's a plain, hand-maintained config (no ESLint, no antfu, nothing extra at install time).
@@ -9,9 +11,11 @@ The rule set is **inspired by [@antfu/eslint-config](https://github.com/antfu/es
 
 ## Compatibility
 
-| `@tmg0/oxlint-config` | Based on `@antfu/eslint-config` | Targets `oxlint` | JS/TS rule coverage               |
-| --------------------- | ------------------------------- | ---------------- | --------------------------------- |
-| `0.1.0`               | `9.0.0`                         | `1.70.0`         | 210 rules (~89% of non-Vue JS/TS) |
+| `@tmg0/oxlint-config`           | `0.1.0`                           |
+| ------------------------------- | --------------------------------- |
+| Based on `@antfu/eslint-config` | `9.0.0`                           |
+| Targets `oxlint`                | `1.70.0`                          |
+| JS/TS rule coverage             | 210 rules (~89% of non-Vue JS/TS) |
 
 ## Why
 
